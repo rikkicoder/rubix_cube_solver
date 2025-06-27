@@ -2,7 +2,10 @@
 // Created by Lakshya Mittal on 04-01-2022.
 //
 
-#include<bits/stdc++.h>
+#include <unordered_map>
+#include <queue>
+#include <algorithm>
+#include <cassert>
 #include "../Model/RubiksCube.h"
 
 #ifndef RUBIKS_CUBE_SOLVER_BFSSOLVER_H

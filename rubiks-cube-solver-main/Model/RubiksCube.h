@@ -1,11 +1,12 @@
-//
-// Created by Shubham Patil on 17/12/21.
-//
+
 
 #ifndef RUBIKS_CUBE_SOLVER_RUBIKSCUBE_H
 #define RUBIKS_CUBE_SOLVER_RUBIKSCUBE_H
 
-#include "bits/stdc++.h"
+#include <iostream>
+#include <string>
+#include <cstdint>
+#include <random>
 
 using namespace std;
 

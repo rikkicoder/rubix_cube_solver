@@ -1,9 +1,6 @@
-//
-// Created by Lakshya Mittal on 19-02-2022.
-//
 
-#include "math.h"
-
+#include <math.h>
+#include <cstdint>
 // Calculates n!.
 uint32_t factorial(uint32_t n)
 {

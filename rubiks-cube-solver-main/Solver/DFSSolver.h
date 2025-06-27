@@ -2,7 +2,7 @@
 // Created by Lakshya Mittal on 02-01-2022.
 //
 
-#include<bits/stdc++.h>
+
 #include "../Model/RubiksCube.h"
 
 #ifndef RUBIKS_CUBE_SOLVER_DFSSOLVER_H

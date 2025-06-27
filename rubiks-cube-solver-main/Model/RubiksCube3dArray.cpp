@@ -1,6 +1,4 @@
-//
-// Created by Lakshya Mittal on 17-12-2021.
-//
+
 
 #include "RubiksCube.h"
 
@@ -254,7 +252,7 @@ public:
 };
 
 struct Hash3d {
-    size_t operator()(const RubiksCube3dArray &r1) const {
+    std::size_t operator()(const RubiksCube3dArray &r1) const {
         string str = "";
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 3; j++) {

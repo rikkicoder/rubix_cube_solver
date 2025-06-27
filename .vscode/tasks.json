@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build active file",
+            "type": "cppbuild",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-I${workspaceFolder}",  // Add workspace to include path
+                "-I${fileDirname}",      // Add current file's directory
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "Get-ChildItem -Path '${fileDirname}' -Include *.exe, *.o, *.obj -Recurse | Remove-Item -Force -ErrorAction SilentlyContinue",
+            "problemMatcher": []
+        },
+        {
+            "label": "Rebuild active file",
+            "dependsOn": ["Clean", "Build active file"],
+            "dependsOrder": "sequence",
+            "group": "build"
+        }
+    ]
+}

@@ -2,7 +2,14 @@
 // Created by Lakshya Mittal on 01-02-2022.
 //
 
-#include<bits/stdc++.h>
+
+#include <unordered_map>
+#include <queue>
+#include <utility>
+#include <algorithm>
+#include <cassert>
+#include <string>
+#include <limits>
 #include "../Model/RubiksCube.h"
 //#include "../Model/PatternDatabase/PatternDatabase.h"
 #include "../PatternDatabases/CornerPatternDatabase.h"

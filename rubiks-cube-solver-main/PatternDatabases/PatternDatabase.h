@@ -1,28 +1,27 @@
-//
-// Created by Lakshya Mittal on 17-02-2022.
-//
-
 #ifndef RUBIKS_CUBE_SOLVER_PATTERNDATABASE_H
 #define RUBIKS_CUBE_SOLVER_PATTERNDATABASE_H
 
 #include "../Model/RubiksCube.h"
 #include "NibbleArray.h"
-#include "bits/stdc++.h"
+#include <vector>
+#include <string>
+#include <cstddef>
+#include <cstdint>
 
 using namespace std;
 
 class PatternDatabase {
 
     NibbleArray database;
-    size_t size;
-    size_t numItems;
+    std::size_t size;
+    std::size_t numItems;
 
     PatternDatabase();
 
 public:
-    PatternDatabase(const size_t size);
+    PatternDatabase(const std::size_t size);
 //    Testing for init_val
-    PatternDatabase(const size_t size, uint8_t init_val);
+    PatternDatabase(const std::size_t size, uint8_t init_val);
 
     virtual uint32_t getDatabaseIndex(const RubiksCube &cube) const = 0;
 
@@ -34,9 +33,9 @@ public:
 
     virtual uint8_t getNumMoves(const uint32_t ind) const;
 
-    virtual size_t getSize() const;
+    virtual std::size_t getSize() const;
 
-    virtual size_t getNumItems() const;
+    virtual std::size_t getNumItems() const;
 
     virtual bool isFull() const;
 
