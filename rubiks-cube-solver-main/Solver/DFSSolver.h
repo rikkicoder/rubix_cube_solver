@@ -6,7 +6,7 @@
 
 template<typename T, typename H>
 class DFSSolver {
-private:
+protected:
     std::vector<typename RubiksCube::MOVE> moves;
     int max_search_depth;
     T rubiksCube;
@@ -33,7 +33,9 @@ public:
     DFSSolver(T _rubiksCube, int _max_search_depth = 8)
         : rubiksCube(_rubiksCube), max_search_depth(_max_search_depth) {}  // Initializer list
 
-    std::vector<RubiksCube::MOVE> solve() {
+        const T& getCube() const{return rubiksCube;}
+        T& getCube() {return rubiksCube;}
+        std::vector<RubiksCube::MOVE> solve() {
         moves.clear();  // Clear previous moves
         dfs(1);
         return moves;

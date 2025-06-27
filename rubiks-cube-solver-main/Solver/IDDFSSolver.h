@@ -1,39 +1,27 @@
-#include "../Model/RubiksCube.h"
-#include "DFSSolver.h"
-#include <vector>
-
 #ifndef RUBIKS_CUBE_SOLVER_IDDFSSOLVER_H
 #define RUBIKS_CUBE_SOLVER_IDDFSSOLVER_H
 
-template<typename T, typename H>
-class IDDFSSolver {
+#include "DFSSolver.h"
 
+template<typename T, typename H>
+class IDDFSSolver : public DFSSolver<T, H> {
 private:
-    int max_search_depth;
-    std::vector<RubiksCube::MOVE> moves;
+    using Base = DFSSolver<T, H>;  // Alias for base class
+    int max_depth;
 
 public:
-    T rubiksCube;
+    IDDFSSolver(T _rubiksCube, int _max_depth = 8) : Base(_rubiksCube, _max_depth), max_depth(_max_depth) {}
 
-    IDDFSSolver(T _rubiksCube, int _max_search_depth = 7) {
-        rubiksCube = _rubiksCube;
-        max_search_depth = _max_search_depth;
-    }
-
-//    Used DFSSolver with increasing max_search_depth
-    std::vector<RubiksCube::MOVE> solve() {
-        for (int i = 1; i <= max_search_depth; i++) {
-            DFSSolver<T, H> dfsSolver(rubiksCube, i);
-            moves = dfsSolver.solve();
-            if (dfsSolver.rubiksCube.isSolved()) {
-                rubiksCube = dfsSolver.rubiksCube;
-                break;
+    std::vector<typename RubiksCube::MOVE> solve() {
+        for (int depth = 1; depth <= max_depth; depth++) {
+            Base::max_search_depth = depth;  // Access via Base::
+            Base::moves.clear();  // Clear previous moves
+            if (Base::dfs(1)) {  // Access via Base::
+                return Base::moves;
             }
         }
-        return moves;
-    }
-
-
+        return Base::moves;
+     }
 };
 
 #endif //RUBIKS_CUBE_SOLVER_IDDFSSOLVER_H
