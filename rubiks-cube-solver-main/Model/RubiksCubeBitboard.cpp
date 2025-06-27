@@ -1,7 +1,7 @@
 
 
 #include "RubiksCube.h"
-
+using namespace std;
 class RubiksCubeBitboard : public RubiksCube {
 
 private:

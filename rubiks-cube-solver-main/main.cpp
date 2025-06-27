@@ -229,19 +229,25 @@ int main() {
 //    iddfsSolver.rubiksCube.print();
 
 // IDA* SOLVER ---------------------------------------------------------------------------------------------------
-//    RubiksCubeBitboard cube;
-//    cube.print();
-//
-//    vector<RubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(5);
-//    for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
-//    cout << "\n";
-//    cube.print();
-//
-//    IDAstarSolver<RubiksCubeBitboard, HashBitboard> idAstarSolver(cube);
-//    vector<RubiksCube::MOVE> solve_moves = idAstarSolver.solve();
-//    for (auto move: solve_moves) cout << cube.getMove(move) << " ";
-//    cout << "\n";
-//    idAstarSolver.rubiksCube.print();
+RubiksCubeBitboard cube;
+cube.print();
+
+vector<RubiksCube::MOVE> shuffle_moves = cube.randomShuffleCube(5);
+for (auto move: shuffle_moves) cout << cube.getMove(move) << " ";
+cout << "\n";
+cube.print();
+
+// Add database file path (update with your actual path)
+std::string dbPath = "C:/path/to/your/pattern_database_file.dat";
+
+// Pass both required arguments to constructor
+IDAstarSolver<RubiksCubeBitboard, HashBitboard> idAstarSolver(cube, dbPath);
+
+vector<RubiksCube::MOVE> solve_moves = idAstarSolver.solve();
+for (auto move: solve_moves) cout << cube.getMove(move) << " ";
+cout << "\n";
+idAstarSolver.rubiksCube.print();
+
 
 // CornerPatternDatabase Testing ---------------------------------------------------------------------------------
 
@@ -271,18 +277,7 @@ int main() {
 //    CornerDBMaker dbMaker(fileName, 0x99);
 //    dbMaker.bfsAndStore();
 
-    RubiksCubeBitboard cube;
-    auto shuffleMoves = cube.randomShuffleCube(13);
-    cube.print();
-    for (auto move: shuffleMoves) cout << cube.getMove(move) << " ";
-    cout << "\n";
 
-    IDAstarSolver<RubiksCubeBitboard, HashBitboard> idaStarSolver(cube, fileName);
-    auto moves = idaStarSolver.solve();
-
-    idaStarSolver.rubiksCube.print();
-    for (auto move: moves) cout << cube.getMove(move) << " ";
-    cout << "\n";
 
 
     return 0;

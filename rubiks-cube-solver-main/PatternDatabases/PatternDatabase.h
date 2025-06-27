@@ -7,7 +7,7 @@
 #include <string>
 #include <cstddef>
 #include <cstdint>
-
+#include <fstream>
 using namespace std;
 
 class PatternDatabase {

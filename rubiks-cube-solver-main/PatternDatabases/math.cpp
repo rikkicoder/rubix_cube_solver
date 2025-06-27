@@ -1,5 +1,5 @@
 
-#include <math.h>
+#include "cube_math.h"
 #include <cstdint>
 // Calculates n!.
 uint32_t factorial(uint32_t n)

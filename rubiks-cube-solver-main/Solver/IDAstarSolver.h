@@ -1,8 +1,3 @@
-//
-// Created by Lakshya Mittal on 01-02-2022.
-//
-
-
 #include <unordered_map>
 #include <queue>
 #include <utility>

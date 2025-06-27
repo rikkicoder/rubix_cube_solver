@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rikki\Desktop\rubiks-cube-solver-project\rubiks-cube-solver-main\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rikki\Desktop\rubiks-cube-solver-project\rubiks-cube-solver-main\Model\RubiksCube.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rikki\Desktop\rubiks-cube-solver-project\rubiks-cube-solver-main\Model\RubiksCube3dArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rikki\Desktop\rubiks-cube-solver-project\rubiks-cube-solver-main\Model\RubiksCube1dArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rikki\Desktop\rubiks-cube-solver-project\rubiks-cube-solver-main\Model\RubiksCubeBitboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rikki\Desktop\rubiks-cube-solver-project\rubiks-cube-solver-main\PatternDatabases\NibbleArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rikki\Desktop\rubiks-cube-solver-project\rubiks-cube-solver-main\PatternDatabases\PatternDatabase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rikki\Desktop\rubiks-cube-solver-project\rubiks-cube-solver-main\PatternDatabases\CornerPatternDatabase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rikki\Desktop\rubiks-cube-solver-project\rubiks-cube-solver-main\PatternDatabases\CornerDBMaker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rikki\Desktop\rubiks-cube-solver-project\rubiks-cube-solver-main\PatternDatabases\math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rikki\Desktop\rubiks-cube-solver-project\rubiks-cube-solver-main\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E43B0594-C697-390E-9541-32F58504DD90}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

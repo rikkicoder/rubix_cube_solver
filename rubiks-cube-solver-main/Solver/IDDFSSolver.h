@@ -1,10 +1,6 @@
-//
-// Created by Lakshya Mittal on 04-01-2022.
-//
-
-
 #include "../Model/RubiksCube.h"
 #include "DFSSolver.h"
+#include <vector>
 
 #ifndef RUBIKS_CUBE_SOLVER_IDDFSSOLVER_H
 #define RUBIKS_CUBE_SOLVER_IDDFSSOLVER_H
@@ -14,7 +10,7 @@ class IDDFSSolver {
 
 private:
     int max_search_depth;
-    vector<RubiksCube::MOVE> moves;
+    std::vector<RubiksCube::MOVE> moves;
 
 public:
     T rubiksCube;
@@ -25,7 +21,7 @@ public:
     }
 
 //    Used DFSSolver with increasing max_search_depth
-    vector<RubiksCube::MOVE> solve() {
+    std::vector<RubiksCube::MOVE> solve() {
         for (int i = 1; i <= max_search_depth; i++) {
             DFSSolver<T, H> dfsSolver(rubiksCube, i);
             moves = dfsSolver.solve();
